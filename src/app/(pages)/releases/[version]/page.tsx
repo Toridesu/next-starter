@@ -26,6 +26,13 @@ export async function generateMetadata({
   return {
     title: `リリース ${version}`,
     description: releaseData.title,
+    openGraph: {
+      images: [
+        {
+          url: `https://Toridesu.github.io/releases/${version}/opengraph-image.png`,
+        },
+      ],
+    },
   };
 }
 
